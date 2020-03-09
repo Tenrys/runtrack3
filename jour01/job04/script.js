@@ -1,5 +1,5 @@
-function bisextile(annee) {
-	return (annee % 4 === 0 && annee % 100 !== 0) || annee % 400 === 0;
+function bisextile(année) {
+	return (année % 4 === 0 && année % 100 !== 0) || année % 400 === 0;
 }
 
 console.log(bisextile(new Date().getUTCFullYear()));
