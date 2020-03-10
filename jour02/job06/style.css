@@ -1,0 +1,39 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Arial";
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav {
+	height: 64px;
+}
+
+main {
+	min-height: 512px;
+}
+
+footer {
+	height: 256px;
+}
+
+#laplateforme h1 {
+	color: white;
+}
+
+#laplateforme body {
+	background: #88c1d0;
+}
+
+#laplateforme nav {
+	background: #ffca4b;
+}
+
+#laplateforme footer {
+	background: #275fa0;
+}
