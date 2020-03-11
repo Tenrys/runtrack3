@@ -12,7 +12,7 @@ $(document).ready(() => {
 		LaPlateforme.push(part);
 	}
 	let empty = LaPlateforme[rand];
-	LaPlateforme.sort(function() {
+	LaPlateforme.sort(() => {
 		return 0.5 - Math.random();
 	});
 	empty = LaPlateforme[LaPlateforme.indexOf(empty)];

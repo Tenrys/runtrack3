@@ -17,7 +17,7 @@ $(document).ready(() => {
 
 	function shuffle() {
 		arcEnCiel
-			.sort(function() {
+			.sort(() => {
 				return 0.5 - Math.random();
 			})
 			.forEach(el => $("#melangees").append(el));
