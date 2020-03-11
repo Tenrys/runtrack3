@@ -10,6 +10,14 @@
 			border: 4px solid black;
 			padding: 1em;
 		}
+
+		.win {
+			color: green;
+		}
+
+		.lose {
+			color: red;
+		}
 	</style>
 </head>
 <body>
