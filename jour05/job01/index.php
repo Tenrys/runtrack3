@@ -1,6 +1,6 @@
 <?php
 
-require "util.php";
+session_start();
 
 ?>
 

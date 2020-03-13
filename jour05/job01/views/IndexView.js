@@ -12,7 +12,7 @@ class IndexView extends View {
 
 			this.container.find("#disconnect").click(() => {
 				$.ajax({
-					method: "GET",
+					method: "POST",
 					url: "deconnexion.php"
 				}).done(() => {
 					SESSION = undefined;

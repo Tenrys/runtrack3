@@ -1,5 +1,10 @@
 <?php
 
+if (strtolower($_SERVER["REQUEST_METHOD"]) === "get") {
+	header("Location: index.php");
+	die;
+}
+
 $db = new PDO("mysql:host=127.0.0.1;dbname=runtrack3jour5", "root", "");
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
