@@ -2,11 +2,9 @@ class IndexView extends View {
 	show() {
 		super.show();
 
-		this.container
-			.find("#welcome")
-			.text(`Bonjour ${typeof SESSION !== "undefined" ? SESSION.prenom : "visiteur"} !`);
+		this.container.find("#welcome").text(`Bonjour ${window.SESSION ? window.SESSION.prenom : "visiteur"} !`);
 
-		if (typeof SESSION !== "undefined") {
+		if (window.SESSION) {
 			this.container.find("#register").hide();
 			this.container.find("#connect").hide();
 
@@ -15,7 +13,7 @@ class IndexView extends View {
 					method: "POST",
 					url: "deconnexion.php"
 				}).done(() => {
-					SESSION = undefined;
+					window.SESSION = undefined;
 					Page.switchView("index"); // Refresh
 				});
 			});

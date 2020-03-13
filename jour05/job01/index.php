@@ -14,7 +14,7 @@ session_start();
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<?php
 			if (isset($_SESSION) && isset($_SESSION["user"])) { ?>
-				<script>SESSION = JSON.parse(`<?= json_encode($_SESSION["user"]) ?>`)</script>
+				<script>window.SESSION = JSON.parse(`<?= json_encode($_SESSION["user"]) ?>`)</script>
 			<?php }
 		?>
 		<script src="script.js"></script>

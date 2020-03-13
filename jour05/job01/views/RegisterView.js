@@ -1,5 +1,10 @@
 class RegisterView extends View {
 	show() {
+		if (window.SESSION) {
+			Page.switchView("index");
+			return;
+		}
+
 		super.show();
 
 		const container = this.container;
@@ -24,7 +29,6 @@ class RegisterView extends View {
 						container.find("h3").after($(`<p class="error"></p>`).text(result.messages.join("\n")));
 					}
 				}
-				console.log(result);
 			});
 		});
 	}

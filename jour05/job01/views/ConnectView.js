@@ -1,5 +1,10 @@
 class ConnectView extends View {
 	show() {
+		if (window.SESSION) {
+			Page.switchView("index");
+			return;
+		}
+
 		super.show();
 
 		const container = this.container;
@@ -14,7 +19,7 @@ class ConnectView extends View {
 				dataType: "json"
 			}).done((result, _, response) => {
 				if (result.success) {
-					var SESSION = result.user;
+					window.SESSION = result.user;
 					Page.switchView("index");
 				} else {
 					if (result.messages) {
@@ -25,7 +30,6 @@ class ConnectView extends View {
 						container.find("h3").after($(`<p class="error"></p>`).text(result.messages.join("\n")));
 					}
 				}
-				console.log(result);
 			});
 		});
 	}

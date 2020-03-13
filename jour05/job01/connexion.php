@@ -16,6 +16,7 @@
 		sendError(["Mot de passe incorrect"]);
 	}
 
+	unset($result["password"]);
 	$_SESSION["user"] = $result;
 
 	if ($success) {
