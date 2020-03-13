@@ -6,9 +6,11 @@ const Page = {
 			view.hide();
 		}
 
+		if (location.hash !== `#${to}`) {
+			history.pushState(null, null, `#${to}`);
+		}
 		this.views[to].show();
 		activeView = to;
-		history.pushState(null, null, `#${to}`);
 	}
 };
 
