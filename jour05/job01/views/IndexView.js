@@ -1,4 +1,9 @@
 class IndexView extends View {
+	constructor() {
+		super();
+		this.view = "index";
+	}
+
 	show() {
 		super.show();
 

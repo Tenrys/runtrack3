@@ -1,4 +1,9 @@
 class ConnectView extends View {
+	constructor() {
+		super();
+		this.view = "connect";
+	}
+
 	show() {
 		if (window.SESSION) {
 			Page.switchView("index");

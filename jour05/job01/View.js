@@ -1,30 +1,22 @@
 class View {
-	constructor(el) {
-		this.container = $(el);
-	}
 	async init() {
-		this.template = await $.ajax({ method: "GET", url: `views/html/${this.container.attr("view")}.html` });
+		this.template = await $.ajax({ method: "GET", url: `views/html/${this.view}.html` });
 
 		return this;
 	}
 
 	show() {
-		if (this.container.children().length < 1) {
-			this.container.append($(this.template));
+		this.container = $(this.template);
+		$("#app").append(this.container);
 
-			if (Page) {
-				this.container.find("[to]").click(function(ev) {
-					ev.preventDefault();
-					Page.switchView($(this).attr("to"));
-				});
-			}
-		}
-
-		this.container.show();
+		this.container.find("[to]").click(function(ev) {
+			ev.preventDefault();
+			Page.switchView($(this).attr("to"));
+		});
 	}
 	hide() {
-		this.container.empty();
-
-		this.container.hide();
+		if (this.container) {
+			this.container.remove();
+		}
 	}
 }

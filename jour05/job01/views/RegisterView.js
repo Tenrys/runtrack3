@@ -1,4 +1,9 @@
 class RegisterView extends View {
+	constructor() {
+		super();
+		this.view = "register";
+	}
+
 	show() {
 		if (window.SESSION) {
 			Page.switchView("index");

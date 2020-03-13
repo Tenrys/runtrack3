@@ -30,9 +30,9 @@ $(document).ready(async () => {
 	await $.getScript("views/RegisterView.js");
 	await $.getScript("views/ConnectView.js");
 
-	Page.views.index = await new IndexView($("[view='index']")).init();
-	Page.views.register = await new RegisterView($("[view='register']")).init();
-	Page.views.connect = await new ConnectView($("[view='connect']")).init();
+	Page.views.index = await new IndexView().init();
+	Page.views.register = await new RegisterView().init();
+	Page.views.connect = await new ConnectView().init();
 
 	Page.switchView(
 		{

@@ -1,41 +1,43 @@
-<h1>Inscription</h1>
-<h3><a href="#" to="index">Retour</a></h3>
+<section id="register">
+	<h1>Inscription</h1>
+	<h3><a href="#" to="index">Retour</a></h3>
 
-<form>
-	<div class="columns">
-		<div class="column">
-			<label for="prenom">Prénom</label>
-			<input type="text" name="prenom" id="prenom" maxlength="255" required/>
+	<form>
+		<div class="columns">
+			<div class="column">
+				<label for="prenom">Prénom</label>
+				<input type="text" name="prenom" id="prenom" maxlength="255" required />
+			</div>
+
+			<div class="column">
+				<label for="nom">Nom</label>
+				<input type="text" name="nom" id="nom" maxlength="255" required />
+			</div>
 		</div>
 
-		<div class="column">
-			<label for="nom">Nom</label>
-			<input type="text" name="nom" id="nom" maxlength="255" required/>
-		</div>
-	</div>
-
-	<div class="columns">
-		<div class="column">
-			<label for="email">E-mail</label>
-			<input type="email" name="email" id="email" maxlength="255" required/>
-		</div>
-	</div>
-
-	<div class="columns">
-		<div class="column">
-			<label for="password">Mot de passe</label>
-			<input type="password" name="password" id="password" maxlength="255" required/>
+		<div class="columns">
+			<div class="column">
+				<label for="email">E-mail</label>
+				<input type="email" name="email" id="email" maxlength="255" required />
+			</div>
 		</div>
 
-		<div class="column">
-			<label for="passwordConfirm">Confirmation</label>
-			<input type="password" name="passwordConfirm" id="passwordConfirm" maxlength="255" required/>
-		</div>
-	</div>
+		<div class="columns">
+			<div class="column">
+				<label for="password">Mot de passe</label>
+				<input type="password" name="password" id="password" maxlength="255" required />
+			</div>
 
-	<div class="columns">
-		<div class="column">
-			<input type="submit" value="S'inscrire">
+			<div class="column">
+				<label for="passwordConfirm">Confirmation</label>
+				<input type="password" name="passwordConfirm" id="passwordConfirm" maxlength="255" required />
+			</div>
 		</div>
-	</div>
-</form>
+
+		<div class="columns">
+			<div class="column">
+				<input type="submit" value="S'inscrire" />
+			</div>
+		</div>
+	</form>
+</section>

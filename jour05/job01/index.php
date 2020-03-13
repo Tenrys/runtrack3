@@ -22,10 +22,6 @@ session_start();
 	</head>
 
 	<body>
-		<main>
-			<section view="index" style="display: none;"></section>
-			<section view="register" style="display: none;"></section>
-			<section view="connect" style="display: none;"></section>
-		</main>
+		<main id="app"></main>
 	</body>
 </html>
